@@ -1,8 +1,10 @@
 import javax.swing.JFrame;
 import java.awt.*;
+import java.awt.event.KeyEvent;
 
 public class Window extends JFrame implements Runnable {
   Graphics2D g2;
+  KL keylistener = new KL();
 
   public Window(){
     this.setSize(Constants.SCREEN_WIDTH,Constants.SCREEN_HEIGHT);
@@ -10,6 +12,7 @@ public class Window extends JFrame implements Runnable {
     this.setResizable(true);
     this.setVisible(true);
     this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    this.addKeyListener(this.keylistener);
     g2 = (Graphics2D)this.getGraphics();
   }
 
@@ -24,8 +27,12 @@ public class Window extends JFrame implements Runnable {
     g2.fillArc(300, 300, 50, 50, 0, 360);
 
 
-    System.out.println(deltaTime + " has passed since last frame");
-    System.out.println(1 / deltaTime + " fps");
+    // VK_UP arrow up in keyboard
+    if(keylistener.isKeyPressed(KeyEvent.VK_UP)){
+      System.out.println("arrow up is pressed");
+    } else if (keylistener.isKeyPressed(KeyEvent.VK_DOWN)) {
+      System.out.println("of course down");
+    }
   }
 
   @Override
