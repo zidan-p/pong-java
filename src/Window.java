@@ -6,6 +6,9 @@ public class Window extends JFrame implements Runnable {
   Graphics2D g2;
   KL keylistener = new KL();
 
+  // entity that play
+  Rect player1, ai, ball; // let say it 8-bit game, so the ball must be 8 bit
+
   public Window(){
     this.setSize(Constants.SCREEN_WIDTH,Constants.SCREEN_HEIGHT);
     this.setTitle(Constants.SCREEN_TITLE);
@@ -14,6 +17,14 @@ public class Window extends JFrame implements Runnable {
     this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     this.addKeyListener(this.keylistener);
     g2 = (Graphics2D)this.getGraphics();
+
+    // init entity
+    // NOTE: I don't know if it's just my computer or else, but apparently
+    // the draw method measure 0 point from the edge of the frame, so I must add some value
+    // to wild hack this behaviour
+    player1 = new Rect(10, 0, 30, 100, Color.BLACK);
+    ai = new Rect(Constants.SCREEN_WIDTH - 40, 0, 30, 100, Color.BLACK);
+    ball = new Rect(Constants.SCREEN_WIDTH / 2, 100, 30, 30, Color.BLACK);
   }
 
   public void update(double deltaTime){
@@ -22,8 +33,10 @@ public class Window extends JFrame implements Runnable {
     g2.setColor(Color.ORANGE);
     g2.fillRect(0, 0, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
 
-    Rect rect = new Rect(100, 100, 300, 300, Color.ORANGE);
-    rect.draw(g2);
+    // draw entities
+    ball.draw(g2);
+    player1.draw(g2);
+    ai.draw(g2);
   }
 
   @Override
