@@ -22,17 +22,8 @@ public class Window extends JFrame implements Runnable {
     g2.setColor(Color.ORANGE);
     g2.fillRect(0, 0, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
 
-    // fill cirlce red
-    g2.setColor(Color.RED);
-    g2.fillArc(300, 300, 50, 50, 0, 360);
-
-
-    // VK_UP arrow up in keyboard
-    if(keylistener.isKeyPressed(KeyEvent.VK_UP)){
-      System.out.println("arrow up is pressed");
-    } else if (keylistener.isKeyPressed(KeyEvent.VK_DOWN)) {
-      System.out.println("of course down");
-    }
+    Rect rect = new Rect(100, 100, 300, 300, Color.ORANGE);
+    rect.draw(g2);
   }
 
   @Override
