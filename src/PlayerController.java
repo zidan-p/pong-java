@@ -11,7 +11,9 @@ public class PlayerController {
 
   public void update(double delta){
     if(keylistener.isKeyPressed(KeyEvent.VK_DOWN)){
-      this.rect.y += (int) (100 * delta);
+      this.rect.y += 100 * delta;
+    }else if(keylistener.isKeyPressed(KeyEvent.VK_UP)){
+      this.rect.y -= 100 * delta;
     }
   }
 }

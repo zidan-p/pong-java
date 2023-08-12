@@ -1,5 +1,8 @@
 import javax.swing.JFrame;
-import java.awt.*;
+import java.awt.Graphics2D;
+import java.awt.Graphics;
+import java.awt.Color;
+import java.awt.Image;
 import java.awt.event.KeyEvent;
 
 public class Window extends JFrame implements Runnable {
@@ -54,17 +57,30 @@ public class Window extends JFrame implements Runnable {
 
   public void update(double deltaTime){
 
-    // fill all with orange
-    g2.setColor(Color.ORANGE);
-    g2.fillRect(0, 0, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
+    // implement double buffer for screen optimize
+    Image dbImage = createImage(getWidth(), getHeight());
+    Graphics dbg = dbImage.getGraphics();
+    this.draw(dbg);
+    g2.drawImage(dbImage, 0, 0, this);
 
     // update the object position
     playerController.update(deltaTime);
+
+
+  }
+
+  public void draw(Graphics g){
+    Graphics2D g2 = (Graphics2D) g;
+
+    // fill all with orange
+    g2.setColor(Color.ORANGE);
+    g2.fillRect(0, 0, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
 
     // draw entities
     ball.draw(g2);
     player1.draw(g2);
     ai.draw(g2);
+
   }
 
   @Override
