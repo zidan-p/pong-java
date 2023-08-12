@@ -3,11 +3,14 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 
 public class Window extends JFrame implements Runnable {
-  Graphics2D g2;
-  KL keylistener = new KL();
+  public Graphics2D g2;
+  public KL keylistener = new KL();
 
   // entity that play
-  Rect player1, ai, ball; // let say it 8-bit game, so the ball must be 8 bit
+  public Rect player1, ai, ball; // let say it 8-bit game, so the ball must be 8 bit
+
+  public PlayerController playerController;
+
 
   public Window(){
     this.setSize(Constants.SCREEN_WIDTH,Constants.SCREEN_HEIGHT);
@@ -29,6 +32,8 @@ public class Window extends JFrame implements Runnable {
       Constants.PADDLE_HEIGHT,
       Constants.PADDLE_COLOR
     );
+
+    playerController = new PlayerController(player1, keylistener);
 
     ai = new Rect(
       Constants.SCREEN_WIDTH - Constants.PADDLE_WIDTH - Constants.PADDING_X,
@@ -52,6 +57,9 @@ public class Window extends JFrame implements Runnable {
     // fill all with orange
     g2.setColor(Color.ORANGE);
     g2.fillRect(0, 0, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
+
+    // update the object position
+    playerController.update(deltaTime);
 
     // draw entities
     ball.draw(g2);

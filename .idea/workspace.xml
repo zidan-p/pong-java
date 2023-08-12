@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8f2aad4-599b-4d33-b0c9-1c225f8a4a4b" name="Changes" comment="white space">
+    <list default="true" id="a8f2aad4-599b-4d33-b0c9-1c225f8a4a4b" name="Changes" comment="draw player">
+      <change afterPath="$PROJECT_DIR$/src/PlayerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691769118061</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="draw player">
+      <created>1691815027970</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1691815027970</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -110,9 +119,9 @@
     <MESSAGE value="game loop and frame per second" />
     <MESSAGE value="fill color" />
     <MESSAGE value="user input" />
-    <MESSAGE value="draw player" />
     <MESSAGE value="add some player" />
     <MESSAGE value="white space" />
-    <option name="LAST_COMMIT_MESSAGE" value="white space" />
+    <MESSAGE value="draw player" />
+    <option name="LAST_COMMIT_MESSAGE" value="draw player" />
   </component>
 </project>
