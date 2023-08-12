@@ -22,9 +22,29 @@ public class Window extends JFrame implements Runnable {
     // NOTE: I don't know if it's just my computer or else, but apparently
     // the draw method measure 0 point from the edge of the frame, so I must add some value
     // to wild hack this behaviour
-    player1 = new Rect(10, 0, 30, 100, Color.BLACK);
-    ai = new Rect(Constants.SCREEN_WIDTH - 40, 0, 30, 100, Color.BLACK);
-    ball = new Rect(Constants.SCREEN_WIDTH / 2, 100, 30, 30, Color.BLACK);
+    player1 = new Rect(
+      Constants.PADDING_X,
+      0,
+      Constants.PADDLE_WIDTH,
+      Constants.PADDLE_HEIGHT,
+      Constants.PADDLE_COLOR
+    );
+
+    ai = new Rect(
+      Constants.SCREEN_WIDTH - Constants.PADDLE_WIDTH - Constants.PADDING_X,
+      0,
+      Constants.PADDLE_WIDTH,
+      Constants.PADDLE_HEIGHT,
+      Constants.PADDLE_COLOR
+    );
+
+    ball = new Rect(
+      Constants.SCREEN_WIDTH / 2,
+      100,
+      Constants.BALL_WIDTH,
+      Constants.BALL_WIDTH,
+      Constants.PADDLE_COLOR
+    );
   }
 
   public void update(double deltaTime){
