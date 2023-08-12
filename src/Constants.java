@@ -11,4 +11,8 @@ public class Constants {
   public static final double PADDING_X = 40;
 
   public static final double BALL_WIDTH = 20;
+  public static final double PADDLE_SPEED = 150;
+
+  public static double TOOLBAR_HEIGHT;
+  public static double INSETS_BOTTOM;
 }

@@ -23,6 +23,9 @@ public class Window extends JFrame implements Runnable {
     this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     this.addKeyListener(this.keylistener);
     g2 = (Graphics2D)this.getGraphics();
+    Constants.TOOLBAR_HEIGHT = this.getInsets().top;
+    System.out.println(Constants.TOOLBAR_HEIGHT);
+    Constants.INSETS_BOTTOM = this.getInsets().bottom;
 
     // init entity
     // NOTE: I don't know if it's just my computer or else, but apparently
