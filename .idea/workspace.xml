@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8f2aad4-599b-4d33-b0c9-1c225f8a4a4b" name="Changes" comment="player collision">
-      <change afterPath="$PROJECT_DIR$/src/Ball.java" afterDir="false" />
+    <list default="true" id="a8f2aad4-599b-4d33-b0c9-1c225f8a4a4b" name="Changes" comment="moving the ball">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayerController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691854155868</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="moving the ball">
+      <created>1691899277395</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1691899277395</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -141,6 +147,7 @@
     <MESSAGE value="player controller" />
     <MESSAGE value="implement double buffer" />
     <MESSAGE value="player collision" />
-    <option name="LAST_COMMIT_MESSAGE" value="player collision" />
+    <MESSAGE value="moving the ball" />
+    <option name="LAST_COMMIT_MESSAGE" value="moving the ball" />
   </component>
 </project>

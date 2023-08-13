@@ -15,7 +15,7 @@ public class Window extends JFrame implements Runnable {
   // controller
   public Ball ball;
   public PlayerController playerController;
-
+  public PlayerController aiController;
 
   public Window(){
     this.setSize(Constants.SCREEN_WIDTH,Constants.SCREEN_HEIGHT);
@@ -50,6 +50,8 @@ public class Window extends JFrame implements Runnable {
       Constants.PADDLE_HEIGHT,
       Constants.PADDLE_COLOR
     );
+
+    aiController = new PlayerController(ai);
 
     ballRect = new Rect(
       Constants.SCREEN_WIDTH / 2,

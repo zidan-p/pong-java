@@ -9,13 +9,32 @@ public class PlayerController {
     this.keylistener = keylistener;
   }
 
+  // when the controller didn't exist, let AI control the character
+  public PlayerController(Rect rect){
+    this.rect = rect;
+    keylistener = null;
+  }
+
   public void update(double delta){
-    if(keylistener.isKeyPressed(KeyEvent.VK_DOWN)){
-      if((rect.y + Constants.PADDLE_SPEED * delta) + rect.height < Constants.SCREEN_HEIGHT - Constants.INSETS_BOTTOM)
-        this.rect.y += Constants.PADDLE_SPEED * delta;
-    }else if(keylistener.isKeyPressed(KeyEvent.VK_UP)){
-      if(rect.y - Constants.PADDLE_SPEED * delta > Constants.TOOLBAR_HEIGHT)
-        this.rect.y -= Constants.PADDLE_SPEED * delta;
+    if(keylistener != null){
+      if(keylistener.isKeyPressed(KeyEvent.VK_DOWN)){
+        moveDown(delta);
+      }else if(keylistener.isKeyPressed(KeyEvent.VK_UP)){
+        moveUp(delta);
+      }
     }
+
+
+
+  }
+
+  private void moveUp(double delta){
+    if((rect.y + Constants.PADDLE_SPEED * delta) + rect.height < Constants.SCREEN_HEIGHT - Constants.INSETS_BOTTOM)
+      this.rect.y += Constants.PADDLE_SPEED * delta;
+  }
+
+  private void moveDown(double delta){
+    if(rect.y - Constants.PADDLE_SPEED * delta > Constants.TOOLBAR_HEIGHT)
+      this.rect.y -= Constants.PADDLE_SPEED * delta;
   }
 }
