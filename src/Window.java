@@ -9,9 +9,11 @@ public class Window extends JFrame implements Runnable {
   public Graphics2D g2;
   public KL keylistener = new KL();
 
-  // entity that play
-  public Rect player1, ai, ball; // let say it 8-bit game, so the ball must be 8 bit
+  // entity that drew in canvas
+  public Rect player1, ai, ballRect; // let say it 8-bit game, so the ball must be 8 bit
 
+  // controller
+  public Ball ball;
   public PlayerController playerController;
 
 
@@ -49,13 +51,15 @@ public class Window extends JFrame implements Runnable {
       Constants.PADDLE_COLOR
     );
 
-    ball = new Rect(
+    ballRect = new Rect(
       Constants.SCREEN_WIDTH / 2,
       100,
       Constants.BALL_WIDTH,
       Constants.BALL_WIDTH,
       Constants.PADDLE_COLOR
     );
+
+    ball = new Ball(ballRect,player1, ai);
   }
 
   public void update(double deltaTime){
@@ -68,7 +72,7 @@ public class Window extends JFrame implements Runnable {
 
     // update the object position
     playerController.update(deltaTime);
-
+    ball.update(deltaTime);
 
   }
 
@@ -80,9 +84,9 @@ public class Window extends JFrame implements Runnable {
     g2.fillRect(0, 0, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
 
     // draw entities
-    ball.draw(g2);
     player1.draw(g2);
     ai.draw(g2);
+    ballRect.draw(g2);
 
   }
 
