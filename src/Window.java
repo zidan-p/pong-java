@@ -15,7 +15,7 @@ public class Window extends JFrame implements Runnable {
   // controller
   public Ball ball;
   public PlayerController playerController;
-  public PlayerController aiController;
+  public AIController aiController;
 
   public Window(){
     this.setSize(Constants.SCREEN_WIDTH,Constants.SCREEN_HEIGHT);
@@ -40,18 +40,7 @@ public class Window extends JFrame implements Runnable {
       Constants.PADDLE_HEIGHT,
       Constants.PADDLE_COLOR
     );
-
     playerController = new PlayerController(player1, keylistener);
-
-    ai = new Rect(
-      Constants.SCREEN_WIDTH - Constants.PADDLE_WIDTH - Constants.PADDING_X,
-      0,
-      Constants.PADDLE_WIDTH,
-      Constants.PADDLE_HEIGHT,
-      Constants.PADDLE_COLOR
-    );
-
-    aiController = new PlayerController(ai);
 
     ballRect = new Rect(
       Constants.SCREEN_WIDTH / 2,
@@ -61,7 +50,17 @@ public class Window extends JFrame implements Runnable {
       Constants.PADDLE_COLOR
     );
 
+    ai = new Rect(
+      Constants.SCREEN_WIDTH - Constants.PADDLE_WIDTH - Constants.PADDING_X,
+      0,
+      Constants.PADDLE_WIDTH,
+      Constants.PADDLE_HEIGHT,
+      Constants.PADDLE_COLOR
+    );
     ball = new Ball(ballRect,player1, ai);
+
+    aiController = new AIController(new PlayerController(ai), ballRect);
+
   }
 
   public void update(double deltaTime){
@@ -74,6 +73,7 @@ public class Window extends JFrame implements Runnable {
 
     // update the object position
     playerController.update(deltaTime);
+    aiController.update(deltaTime);
     ball.update(deltaTime);
 
   }

@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8f2aad4-599b-4d33-b0c9-1c225f8a4a4b" name="Changes" comment="moving the ball">
+    <list default="true" id="a8f2aad4-599b-4d33-b0c9-1c225f8a4a4b" name="Changes" comment="implement ai controller inside player controller">
+      <change afterPath="$PROJECT_DIR$/src/AIController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691899277395</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="implement ai controller inside player controller">
+      <created>1691908684127</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1691908684127</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -148,6 +158,7 @@
     <MESSAGE value="implement double buffer" />
     <MESSAGE value="player collision" />
     <MESSAGE value="moving the ball" />
-    <option name="LAST_COMMIT_MESSAGE" value="moving the ball" />
+    <MESSAGE value="implement ai controller inside player controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement ai controller inside player controller" />
   </component>
 </project>

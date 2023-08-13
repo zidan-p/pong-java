@@ -25,7 +25,6 @@ public class Ball {
         this.rect.y <= this.leftPaddle.y + this.leftPaddle.height
       ){
         this.vx *= -1;
-        this.vy *= -1;
       }
       else if(this.rect.x + this.rect.width < this.leftPaddle.x){
         System.out.println("You lost the game!!");
@@ -39,7 +38,6 @@ public class Ball {
         this.rect.y <= this.rightPaddle.y + this.rightPaddle.height
       ){
         this.vx *= -1;
-        this.vy *= -1;
       }
       else if(this.rect.x + this.rect.width > this.rightPaddle.x + this.rightPaddle.width){
         System.out.println("AI lost the game!");
@@ -57,8 +55,13 @@ public class Ball {
       }
     }
 
+
     this.rect.x += vx * delta;
     this.rect.y += vy * delta;
-    System.out.println("ball position : " + this.rect.x + ", " + this.rect.y);
+
+    // System.out.println("ball position : " + this.rect.x + ", " + this.rect.y);
+    // test accel
+//    vx += vx < 0? -2 : 2;
+//    vy += vy < 0? -2 : 2;
   }
 }
