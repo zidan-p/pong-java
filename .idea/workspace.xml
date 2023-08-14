@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8f2aad4-599b-4d33-b0c9-1c225f8a4a4b" name="Changes" comment="implement ai controller inside player controller">
-      <change afterPath="$PROJECT_DIR$/src/AIController.java" afterDir="false" />
+    <list default="true" id="a8f2aad4-599b-4d33-b0c9-1c225f8a4a4b" name="Changes" comment="ball pong with AI controller">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlayerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +25,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://C:/Program Files/Java/jdk-17.0.5/lib/src.zip!/java.desktop/java/awt/Image.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2TqFoUnZG0WmjTYYcIW22I88BEs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -143,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691908684127</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="ball pong with AI controller">
+      <created>1691910368213</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1691910368213</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -159,6 +166,7 @@
     <MESSAGE value="player collision" />
     <MESSAGE value="moving the ball" />
     <MESSAGE value="implement ai controller inside player controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement ai controller inside player controller" />
+    <MESSAGE value="ball pong with AI controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="ball pong with AI controller" />
   </component>
 </project>
